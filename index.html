@@ -26,20 +26,27 @@
 	}
 	          	
 	body {
-		position: absolute;
-		left : 0;
-		top : 0;
-		right : 0;
-		bottom : 0;
-		margin : 0;
+	  position: absolute;
+	  left : 0;
+	  top : 0;
+	  right : 0;
+	  bottom : 0;
+	  margin : 0;
 	  top: var(--safe-area-inset-top);
 	  bottom: var(--safe-area-inset-bottom);
 	  right: var(--safe-area-inset-right);
 	  left: var(--safe-area-inset-left);
-    background:red;
-    border : 10px solid yellow;
+	  background:red;
+      border : 10px solid yellow;
   }
 </head>
 <body>
+	<script>
+		setTimeout(function(){
+			var t = getComputedStyle(document.body);
+			alert("LEFT "+t.left+" | RIGHT "+t.right+" | TOP  "+t.top+" | BOTTOM "+t.bottom);
+			alert("WIDTH "+t.width+" | HEIGHT "+t.height);
+		},500);
+	</script>
 </body>
 </html>
